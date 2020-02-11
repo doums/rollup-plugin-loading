@@ -4,12 +4,19 @@
   "description": "A Rollup plugin that shows a nice spinner when building the bundle",
   "main": "index.js",
   "module": "lib/index.js",
+  "files": [
+    "lib/index.js"
+  ],
   "scripts": {
     "build": "rollup -c",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Pierre D.",
   "license": "MPL-2.0",
+  "repository": {
+    "type" : "git",
+    "url" : "https://github.com/doums/rollup-plugin-loading"
+  },
   "keywords": [
     "rollup",
     "plugin",
