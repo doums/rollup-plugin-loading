@@ -8,8 +8,13 @@ export default {
   input: 'index.js',
   output: [
     {
-      file: 'lib/index.js',
+      file: 'lib/index.esm.js',
       format: 'esm',
+      plugins: [terser()]
+    },
+    {
+      file: 'lib/index.cjs.js',
+      format: 'cjs',
       plugins: [terser()]
     }
   ],
