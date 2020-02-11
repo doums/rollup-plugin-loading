@@ -1,12 +1,10 @@
 {
   "name": "rollup-plugin-loading",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "A Rollup plugin that shows a nice spinner when building the bundle",
-  "main": "lib/index.cjs.js",
-  "module": "lib/index.esm.js",
+  "main": "lib/index.js",
   "files": [
-    "lib/index.cjs.js",
-    "lib/index.esm.js"
+    "lib/index.js"
   ],
   "scripts": {
     "build": "rollup -c",

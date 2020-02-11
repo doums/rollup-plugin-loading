@@ -6,18 +6,11 @@ import json from '@rollup/plugin-json'
 
 export default {
   input: 'index.js',
-  output: [
-    {
-      file: 'lib/index.esm.js',
-      format: 'esm',
-      plugins: [terser()]
-    },
-    {
-      file: 'lib/index.cjs.js',
-      format: 'cjs',
-      plugins: [terser()]
-    }
-  ],
+  output: {
+    file: 'lib/index.js',
+    format: 'cjs',
+    plugins: [terser()]
+  },
   plugins: [
     babel({
       exclude: [
