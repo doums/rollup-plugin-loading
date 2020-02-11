@@ -1,0 +1,38 @@
+{
+  "name": "rollup-plugin-loading",
+  "version": "1.0.0",
+  "description": "A Rollup plugin that shows a nice spinner when building the bundle",
+  "main": "index.js",
+  "module": "lib/index.js",
+  "scripts": {
+    "build": "rollup -c",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Pierre D.",
+  "license": "MPL-2.0",
+  "keywords": [
+    "rollup",
+    "plugin",
+    "rollup-plugin",
+    "progress",
+    "loading",
+    "spinner",
+    "build"
+  ],
+  "devDependencies": {
+    "@babel/cli": "^7.8.4",
+    "@babel/core": "^7.8.4",
+    "@babel/preset-env": "^7.8.4",
+    "@rollup/plugin-commonjs": "^11.0.2",
+    "@rollup/plugin-json": "^4.0.2",
+    "@rollup/plugin-node-resolve": "^7.1.1",
+    "babel-eslint": "^10.0.3",
+    "eslint": "^6.8.0",
+    "rollup": "^1.31.0",
+    "rollup-plugin-babel": "^4.3.3",
+    "rollup-plugin-terser": "^5.2.0"
+  },
+  "dependencies": {
+    "ora": "^4.0.3"
+  }
+}
