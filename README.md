@@ -1,6 +1,6 @@
 ## rollup-plugin-loading
 
-###### :truck: A [Rollup](https://rollupjs.org) plugin that shows a nice spinner when building the bundle
+:truck: A [Rollup](https://rollupjs.org) plugin that shows a nice spinner when building the bundle
 
 #### install
 ```
