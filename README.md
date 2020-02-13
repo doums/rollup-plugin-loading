@@ -37,5 +37,5 @@ color name: `black` `red` `green` `yellow` `blue` `magenta` `cyan` `white` `gray
 default: `4`\
 number of spaces before the spinner
 
-#### license
+### license
 Mozilla Public License 2.0
