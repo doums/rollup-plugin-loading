@@ -5,6 +5,9 @@
     "removeComments": false,
     "preserveConstEnums": true,
     "sourceMap": false,
-    "esModuleInterop": true
+    "esModuleInterop": true,
+    "outDir": "lib",
+    "declaration": true,
+    "resolveJsonModule": true
   }
 }

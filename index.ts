@@ -21,13 +21,13 @@ interface HookConfig {
   writeBundle(): void;
 }
 
-interface OraOptions {
+interface Options {
   spinner?: SpinnerName;
   color?: Color;
   indent?: number;
 }
 
-export default function loading (options?: OraOptions): HookConfig {
+export default function loading (options?: Options): HookConfig {
   return {
     name: 'loading',
     buildStart (): void {
@@ -43,7 +43,7 @@ export default function loading (options?: OraOptions): HookConfig {
         if (color) {
           spinner.color = color
         }
-        if (indent) {
+        if (indent && indent >= 0) {
           spinner.indent = indent
         }
       }
@@ -70,7 +70,6 @@ export default function loading (options?: OraOptions): HookConfig {
     writeBundle (): void {
       spinner.stop()
       if (process.stdout.isTTY) {
-        process.stdout.clearLine(0)
         process.stdout.cursorTo(0)
       }
     }
