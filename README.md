@@ -21,5 +21,21 @@ export default {
 }
 ```
 
-### license
+### api
+#### `function` loading(options?: `Options`): `HookConfig`
+
+#### `object` Options
+**spinner?:** `string`\
+default: `hamburger`\
+spinner name: https://github.com/sindresorhus/cli-spinners/blob/master/spinners.json
+
+**color?:** `string`\
+default: `red`\
+color name: `black` `red` `green` `yellow` `blue` `magenta` `cyan` `white` `gray`
+
+**indent?:** `number`\
+default: `4`\
+number of spaces before the spinner
+
+#### license
 Mozilla Public License 2.0
