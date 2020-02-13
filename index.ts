@@ -25,6 +25,7 @@ interface Options {
   spinner?: SpinnerName;
   color?: Color;
   indent?: number;
+  width?: number;
 }
 
 export default function loading (options?: Options): HookConfig {
@@ -52,7 +53,8 @@ export default function loading (options?: Options): HookConfig {
     },
     transform (code: string, id: string): null {
       const width = process.stdout.columns
-      const offset = spinner.indent + 2
+      const spinnerWidth = options && options.width || 1
+      const offset = spinner.indent + spinnerWidth + 1
       let text = path.relative(__dirname, id)
       if (text.length + offset > width) {
         text = text.slice((text.length + offset + 3) - width)

@@ -31,11 +31,15 @@ spinner name: https://github.com/sindresorhus/cli-spinners/blob/master/spinners.
 
 **color?:** `string`\
 default: `red`\
-color name: `black` `red` `green` `yellow` `blue` `magenta` `cyan` `white` `gray`
+spinner color: `black` `red` `green` `yellow` `blue` `magenta` `cyan` `white` `gray`
 
 **indent?:** `number`\
 default: `4`\
 number of spaces before the spinner
+
+**width?:** `number`\
+default: `1`\
+the width of the spinner in number of character
 
 ### license
 Mozilla Public License 2.0
