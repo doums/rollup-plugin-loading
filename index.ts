@@ -55,7 +55,7 @@ export default function loading (options?: Options): HookConfig {
       const width = process.stdout.columns
       const spinnerWidth = options && options.width || 1
       const offset = spinner.indent + spinnerWidth + 1
-      let text = path.relative(__dirname, id)
+      let text = path.relative(process.cwd(), id)
       if (text.length + offset > width) {
         text = text.slice((text.length + offset + 3) - width)
         spinner.text = `...${text}`

@@ -1,6 +1,6 @@
 {
   "name": "rollup-plugin-loading",
-  "version": "1.0.9",
+  "version": "1.1.0",
   "description": "A Rollup plugin that shows a nice spinner when building the bundle",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
