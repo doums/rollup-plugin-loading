@@ -11,7 +11,6 @@ interface Options {
     spinner?: SpinnerName;
     color?: Color;
     indent?: number;
-    width?: number;
 }
 export default function loading(options?: Options): HookConfig;
 export {};

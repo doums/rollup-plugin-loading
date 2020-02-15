@@ -37,9 +37,5 @@ spinner color: `black` `red` `green` `yellow` `blue` `magenta` `cyan` `white` `g
 default: `4`\
 number of spaces before the spinner
 
-**width?:** `number`\
-default: `1`\
-the width of the spinner in number of character
-
 ### license
 Mozilla Public License 2.0

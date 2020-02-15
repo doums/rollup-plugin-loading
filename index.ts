@@ -3,7 +3,7 @@
  * file, You can obtain one at https://mozilla.org/MPL/2.0/. */
 
 import ora, { Color } from 'ora'
-import { SpinnerName } from 'cli-spinners'
+import cliSpinners, { SpinnerName } from 'cli-spinners'
 import path from 'path'
 
 const spinner = ora({
@@ -12,6 +12,8 @@ const spinner = ora({
   indent: 4,
   stream: process.stdout
 })
+
+let spinnerWidth = cliSpinners['hamburger'].frames[0].length
 
 interface HookConfig {
   name: string;
@@ -25,7 +27,6 @@ interface Options {
   spinner?: SpinnerName;
   color?: Color;
   indent?: number;
-  width?: number;
 }
 
 export default function loading (options?: Options): HookConfig {
@@ -40,6 +41,7 @@ export default function loading (options?: Options): HookConfig {
         } = options
         if (spinner) {
           spinner.spinner = spinnerType
+          spinnerWidth = cliSpinners[spinnerType].frames[0].length
         }
         if (color) {
           spinner.color = color
@@ -53,7 +55,6 @@ export default function loading (options?: Options): HookConfig {
     },
     transform (code: string, id: string): null {
       const width = process.stdout.columns
-      const spinnerWidth = options && options.width || 1
       const offset = spinner.indent + spinnerWidth + 1
       let text = path.relative(process.cwd(), id)
       if (text.length + offset > width) {
