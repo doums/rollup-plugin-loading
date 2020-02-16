@@ -39,7 +39,7 @@ export default function loading (options?: Options): HookConfig {
           color,
           indent
         } = options
-        if (spinner) {
+        if (spinnerType) {
           spinner.spinner = spinnerType
           spinnerWidth = cliSpinners[spinnerType].frames[0].length
         }
